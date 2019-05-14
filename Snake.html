@@ -143,7 +143,7 @@ function sleep (time) {
 
 // listen to keyboard events to move the snake
 document.addEventListener('keydown', function(e) {
- // Voice Recognition
+ 
   try {
   var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   var recognition = new SpeechRecognition();
@@ -175,13 +175,13 @@ catch(e) {
    
     // left arrow key
  
-    if (transcript === "trái" || transcript === "chán" || transcript === "chả" || transcript === "cháy" || transcript === "trả" ){
+    if (transcript === "trái" || transcript === "chán" || transcript === "chả" || transcript === "cháy" || transcript === "trả" || transcript === "Trà" || transcript ==="chạy"){
     if( snake.dx === 0) {
     snake.dx = -grid;
     snake.dy = 0;
   }}
   // up arrow key
-  else if (transcript === "lên" || transcript ==="liên" || transcript ==="lê" || transcript === "bên") {
+  else if (transcript === "lên" || transcript ==="liên" || transcript ==="lê" || transcript === "bên" || transcript === "nên") {
    if(snake.dy === 0) {
     snake.dy = -grid;
     snake.dx = 0;
@@ -193,7 +193,7 @@ catch(e) {
     snake.dy = 0;
   }}
   // down arrow key
-  else if (transcript === "xuống" || transcript === "suốt" || transcript === "súng" || transcript === "số") {
+  else if (transcript === "xuống" || transcript === "suốt" || transcript === "súng" || transcript === "số" || transcript === "xu") {
   	if (snake.dy === 0) {
     snake.dy = grid;
     snake.dx = 0;
